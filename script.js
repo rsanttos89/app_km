@@ -80,16 +80,22 @@ function previewImage(fileInput, imagePreview) {
 
 // ---------------------------------------------------------------------------
 let count = 1;
+let lastContainerType = 'entrada';
+
 function createNewContainer() {
   const main = document.getElementById('#main');
   count++;
+
+  // Determina o tipo do novo container com base no container anterior
+  const newContainerType = lastContainerType === 'entrada' ? 'saída' : 'entrada';
+  lastContainerType = newContainerType;
 
   // Cria um novo container
   const newContainer = document.createElement('div');
   newContainer.className = 'container container-img';
 
   newContainer.innerHTML = `
-    <h3>entrada ${count}</h3>
+    <h3>${newContainerType} ${count}</h3>
     <button class="img container" onclick="openFileInput('fileInput${count}')">
       <span class="container" style="position: absolute; z-index: 1;">+</span>
       <input type="file" name="fileInput${count}" id="fileInput${count}" accept="image/*" style="display: none;" onchange="previewImage('fileInput${count}', 'imagePreview${count}')" />
@@ -100,6 +106,7 @@ function createNewContainer() {
 
   main.appendChild(newContainer);
 }
+
 
 // ---------------------------------------------------------------------------
 // Imprimir PDF
