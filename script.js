@@ -26,8 +26,8 @@ function compressImage(file, callback) {
           const canvas = document.createElement('canvas');
           const ctx = canvas.getContext('2d');
 
-          const maxWidth = 450; // Adjust as needed
-          const maxHeight = 450; // Adjust as needed
+          const maxWidth = 450;
+          const maxHeight = 450;
 
           let width = img.width;
           let height = img.height;
