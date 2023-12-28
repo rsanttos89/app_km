@@ -170,8 +170,25 @@ main .img span {
   z-index: 2;
 }
 
+#obs {
+  display: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: -16px;
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  color: red;
+}
+
+@media (orientation: portrait) {
+  #obs {
+    display: flex;
+  }
+}
+
 @media print {
-  #btn-print, #card {
+  #btn-print, #card, #obs {
     display: none;
   }
   form select,
@@ -179,5 +196,5 @@ main .img span {
     border: none;
     padding: 0px;
   }
-  
+}
 }
