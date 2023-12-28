@@ -87,7 +87,7 @@ function createNewContainer() {
   count++;
 
   // Determina o tipo do novo container com base no container anterior
-  const newContainerType = lastContainerType === 'início' ? 'fim' : 'início';
+  const newContainerType = lastContainerType === 'fim' ? 'início' : 'fim';
   lastContainerType = newContainerType;
 
   // Gera o valor da data atual
