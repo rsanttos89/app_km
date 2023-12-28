@@ -3,9 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
   <title>Formulário de KM</title>
 </head>
 <body>
+  <section id="body" class="container">
+    <div id="container">
+      <header class="container">
+        <h1>formulário km</h1>
+        <input type="date" name="date" id="date-one" />
+      </header>
   
+      <main id="#main">
+        <!-- <div class="container container-img" id="card-one">
+          <h2>entrada 1</h2>
+          <input type="file" name="fileInput-one" id="fileInput-one" id="fileInput-one" accept="image/*" class="img">
+          <input type="date" name="date" />
+        </div>
+   -->
+        <div class="container container-img">
+          <h3>entrada 1</h3>
+          <button class="img container" onclick="openFileInput('fileInputOne')">
+            <span 
+              class="container" 
+              style="position: absolute; z-index: 1;">+</span>
+
+            <input 
+              type="file" 
+              name="fileInputOne" 
+              id="fileInputOne" 
+              accept="image/*" 
+              style="display: none;" 
+              onchange="previewImage('fileInputOne', 'imagePreviewOne')"
+            />
+
+            <img 
+              id="imagePreviewOne" 
+              src="#" alt="Imagem" 
+              style="display:none; z-index: 2;" 
+              class="image-preview"
+            />
+          </button>
+          <input type="date" name="date" />
+        </div>
+      </main>
+  
+      <button id="btn-print" onclick="createNewContainer()">gerar pdf</button>
+    </div>
+  </section>
 </body>
 </html>
