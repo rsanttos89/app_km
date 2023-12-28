@@ -83,7 +83,7 @@ let count = 1;
 let lastContainerType = 'entrada';
 
 function createNewContainer() {
-  const main = document.getElementById('#main');
+  const main = document.getElementById('main');
   count++;
 
   // Determina o tipo do novo container com base no container anterior
@@ -104,9 +104,12 @@ function createNewContainer() {
     <input type="date" name="date" />
   `;
 
-  main.appendChild(newContainer);
-}
+  // Obtém uma referência para o botão
+  const btnPrint = document.getElementById('card');
 
+  // Adiciona o novo container antes do botão
+  main.insertBefore(newContainer, btnPrint);
+}
 
 // ---------------------------------------------------------------------------
 // Imprimir PDF
