@@ -98,7 +98,7 @@ function createNewContainer() {
   newContainer.className = 'container container-img';
 
   newContainer.innerHTML = `
-    <h3>${newContainerType} ${count}</h3>
+    <h3>${newContainerType}</h3>
     <button class="img container" onclick="openFileInput('fileInput${count}')">
       <span class="container" style="position: absolute; z-index: 1;">+</span>
       <input type="file" name="fileInput${count}" id="fileInput${count}" accept="image/*" style="display: none;" onchange="previewImage('fileInput${count}', 'imagePreview${count}')" />
