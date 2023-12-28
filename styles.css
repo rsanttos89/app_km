@@ -162,7 +162,7 @@ main .img span {
 #new-card {
   width: 100px;
   height: 100px;
-  border-radius: 100px;
+  border-radius: 10px;
   font-weight: bold;
   font-size: 2rem;
   color: #1a73e8;
