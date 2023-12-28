@@ -1,4 +1,4 @@
-const version = 'credishop-v29.12.23'; // Atualize a versão sempre que houver alterações nos recursos
+const version = 'credishop-v30.12.23'; // Atualize a versão sempre que houver alterações nos recursos
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/service-worker.js')
