@@ -33,3 +33,6 @@ Os dados são automaticamente salvos localmente no navegador para evitar perdas 
 Esperamos que este formulário seja útil para rastrear e gerenciar deslocamentos de maneira eficiente.
 
 **Desenvolvido por Ricardo**
+******
+<img src="https://raw.githubusercontent.com/rsanttos89/app_km/main/icons/Captura%20de%20tela%202023-12-28%20143732.png" alt="Imagem" width="600">
+
