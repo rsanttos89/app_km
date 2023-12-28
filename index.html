@@ -10,9 +10,40 @@
 <body>
   <section id="body" class="container">
     <div id="container">
-      <header class="container">
-        <h1>formulário km</h1>
-        <input type="date" name="date" id="date-one" />
+      <header>
+          <h1>Formulário de KM</h1>
+
+          <form>
+              <div class="ciclo">
+                  <label for="mesInput">ciclo:</label>
+                  <input type="month" id="mesInput" name="mesInput" />
+              </div>
+
+              <div>
+                  <label for="name-user">Nome do colaborador</label>
+                  <input type="text" name="name-user" id="name-user" placeholder="..." />
+              </div>
+
+              <div class="box-row-inputs">
+                  <div class="input">
+                      <label for="setores">Setor</label>
+                      <select name="setores" id="setores">
+                          <option value="opcao3">ADM</option>
+                          <option value="opcao3">COBRANÇA</option>
+                          <option value="opcao1">CPD</option>
+                          <option value="opcao2">COMERCIAL</option>
+                      </select>
+                  </div>
+
+                  <div class="input">
+                      <label for="filial">Filial</label>
+                      <select name="filial" id="filial">
+                          <option value="opcao1">IMP</option>
+                          <option value="opcao3">AÇA</option>
+                      </select>
+                  </div>
+              </div>
+          </form>
       </header>
   
       <main id="main">
@@ -39,7 +70,7 @@
               class="image-preview"
             />
           </button>
-          <input type="date" name="date" />
+          <input type="date" name="date" id="date-one"/>
         </div>
 
         <div id="card">
