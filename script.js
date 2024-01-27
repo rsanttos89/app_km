@@ -82,20 +82,30 @@ function previewImage(fileInput, imagePreview) {
 let count = 1;
 let lastContainerType = 'entrada';
 
+function removeContainer(containerId) {
+  const containerToRemove = document.getElementById(containerId);
+  if (containerToRemove) {
+    containerToRemove.remove();
+    lastContainerType = 'entrada'; // Reset to 'entrada' after removal
+  }
+}
+
 function createNewContainer() {
   const main = document.getElementById('main');
   count++;
-
-  // Determina o tipo do novo container com base no container anterior
-  const newContainerType = lastContainerType === 'fim' ? 'início' : 'fim';
-  lastContainerType = newContainerType;
 
   // Gera o valor da data atual
   const currentDate = getCurrentDate();
 
   // Cria um novo container
   const newContainer = document.createElement('div');
+  const containerId = `container${count}`;
+  newContainer.id = containerId;
   newContainer.className = 'container container-img';
+
+  // Determina o tipo do novo container com base no container anterior
+  const newContainerType = lastContainerType === 'fim' ? 'início' : 'fim';
+  lastContainerType = newContainerType;
 
   newContainer.innerHTML = `
     <h3>${newContainerType}</h3>
@@ -104,6 +114,7 @@ function createNewContainer() {
       <input type="file" name="fileInput${count}" id="fileInput${count}" accept="image/*" style="display: none;" onchange="previewImage('fileInput${count}', 'imagePreview${count}')" />
       <img id="imagePreview${count}" src="#" alt="Imagem" style="display:none; z-index: 2;" class="image-preview" />
     </button>
+    <button class="btn-remove" type="button" onclick="removeContainer('${containerId}')">Remover</button>
   `;
   // <input type="date" name="date" value="${currentDate}" />
 

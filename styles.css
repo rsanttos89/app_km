@@ -150,7 +150,7 @@ main .img span {
 
 #card {
   width: 100%;
-  height: 200px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,6 +181,16 @@ main .img span {
   color: red;
 }
 
+.btn-remove {
+  width: 100%;
+  padding: 4px;
+  color: #fff;
+  background-color: #1a73e8;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
 @media (orientation: portrait) {
   #obs {
     display: flex;
@@ -196,5 +206,4 @@ main .img span {
     border: none;
     padding: 0px;
   }
-}
 }
