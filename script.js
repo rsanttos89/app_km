@@ -154,7 +154,7 @@ function newDay() {
       <input type="file" name="fileInput${count}" id="fileInput${count}" accept="image/*" style="display: none;" onchange="previewImage('fileInput${count}', 'imagePreview${count}')" />
       <img id="imagePreview${count}" src="#" alt="Imagem" style="display:none; z-index: 2;" class="image-preview" />
     </button>
-    <input type="date" name="date" style="padding: 4px;"/>
+    <input type="date" name="date" style="padding: 4px; -webkit-user-select: none;"/>
   `;
   // <input type="date" name="date" value="${currentDate}" />
 
