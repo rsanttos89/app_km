@@ -109,12 +109,52 @@ function createNewContainer() {
 
   newContainer.innerHTML = `
     <h3>${newContainerType}</h3>
+    
     <button class="img container" onclick="openFileInput('fileInput${count}')">
       <span class="container" style="position: absolute; z-index: 1;">+</span>
       <input type="file" name="fileInput${count}" id="fileInput${count}" accept="image/*" style="display: none;" onchange="previewImage('fileInput${count}', 'imagePreview${count}')" />
       <img id="imagePreview${count}" src="#" alt="Imagem" style="display:none; z-index: 2;" class="image-preview" />
     </button>
     <button class="btn-remove" type="button" onclick="removeContainer('${containerId}')">Remover</button>
+  `;
+  // <input type="date" name="date" value="${currentDate}" />
+
+  // Obtém uma referência para o botão
+  const btnPrint = document.getElementById('card');
+
+  // Adiciona o novo container antes do botão
+  main.insertBefore(newContainer, btnPrint);
+}
+
+function newDay() {
+  const main = document.getElementById('main');
+  count++;
+
+  // Gera o valor da data atual
+  const currentDate = getCurrentDate();
+
+  // Cria um novo container
+  const newContainer = document.createElement('div');
+  const containerId = `container${count}`;
+  newContainer.id = containerId;
+  newContainer.className = 'container container-img';
+
+  // Determina o tipo do novo container com base no container anterior
+  const newContainerType = lastContainerType === 'fim' ? 'início' : 'fim';
+  lastContainerType = newContainerType;
+
+  newContainer.innerHTML = `
+    <div class="row">
+      <h3>${newContainerType}</h3>
+      <button class="btn-remove" type="button" onclick="removeContainer('${containerId}')">Remover</button>
+    </div>
+    
+    <button class="img container" onclick="openFileInput('fileInput${count}')">
+      <span class="container" style="position: absolute; z-index: 1;">+</span>
+      <input type="file" name="fileInput${count}" id="fileInput${count}" accept="image/*" style="display: none;" onchange="previewImage('fileInput${count}', 'imagePreview${count}')" />
+      <img id="imagePreview${count}" src="#" alt="Imagem" style="display:none; z-index: 2;" class="image-preview" />
+    </button>
+    <input type="date" name="date" style="padding: 4px;"/>
   `;
   // <input type="date" name="date" value="${currentDate}" />
 
