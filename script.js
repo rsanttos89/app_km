@@ -90,6 +90,7 @@ function removeContainer(containerId) {
   }
 }
 
+// Função para criar novo container
 function createNewContainer() {
   const main = document.getElementById('main');
   count++;
@@ -104,8 +105,20 @@ function createNewContainer() {
   newContainer.className = 'container container-img';
 
   // Determina o tipo do novo container com base no container anterior
-  const newContainerType = lastContainerType === 'fim' ? 'início' : 'fim';
-  lastContainerType = newContainerType;
+  const lastContainer = document.getElementById(`container${count - 1}`);
+  let newContainerType;
+
+  if (lastContainer) {
+    const lastContainerTypeElement = lastContainer.querySelector('h3');
+    if (lastContainerTypeElement) {
+      const lastContainerTypeText = lastContainerTypeElement.textContent.trim().toLowerCase();
+      newContainerType = lastContainerTypeText === 'início' ? 'fim' : 'início';
+    } else {
+      newContainerType = 'início'; // Caso não encontre o elemento h3, assume-se início
+    }
+  } else {
+    newContainerType = 'início'; // Se não houver último container, assume-se início
+  }
 
   newContainer.innerHTML = `
     <h3>${newContainerType}</h3>
@@ -126,6 +139,7 @@ function createNewContainer() {
   main.insertBefore(newContainer, btnPrint);
 }
 
+// Função para criar um novo dia
 function newDay() {
   const main = document.getElementById('main');
   count++;
@@ -140,8 +154,20 @@ function newDay() {
   newContainer.className = 'container container-img';
 
   // Determina o tipo do novo container com base no container anterior
-  const newContainerType = lastContainerType === 'fim' ? 'início' : 'fim';
-  lastContainerType = newContainerType;
+  const lastContainer = document.getElementById(`container${count - 1}`);
+  let newContainerType;
+
+  if (lastContainer) {
+    const lastContainerTypeElement = lastContainer.querySelector('h3');
+    if (lastContainerTypeElement) {
+      const lastContainerTypeText = lastContainerTypeElement.textContent.trim().toLowerCase();
+      newContainerType = lastContainerTypeText === 'início' ? 'fim' : 'início';
+    } else {
+      newContainerType = 'início'; // Caso não encontre o elemento h3, assume-se início
+    }
+  } else {
+    newContainerType = 'início'; // Se não houver último container, assume-se início
+  }
 
   newContainer.innerHTML = `
     <div class="row">
@@ -164,6 +190,7 @@ function newDay() {
   // Adiciona o novo container antes do botão
   main.insertBefore(newContainer, btnPrint);
 }
+
 
 // ---------------------------------------------------------------------------
 // Imprimir PDF
