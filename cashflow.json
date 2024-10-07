@@ -1,0 +1,105 @@
+{
+    "details": [
+        {
+            "transaction_date": "2024-01-01",
+            "income": "24.65",
+            "outcome": "0",
+            "total": "24.65"
+        },
+        {
+            "transaction_date": "2024-01-02",
+            "income": "571.62",
+            "outcome": "0",
+            "total": "571.62"
+        },
+        {
+            "transaction_date": "2024-01-03",
+            "income": "1059.27",
+            "outcome": "-14.66",
+            "total": "1044.61"
+        },
+        {
+            "transaction_date": "2024-01-04",
+            "income": "680.82",
+            "outcome": "0",
+            "total": "680.82"
+        },
+        {
+            "transaction_date": "2024-01-05",
+            "income": "409.40",
+            "outcome": "0",
+            "total": "409.40"
+        },
+        {
+            "transaction_date": "2024-01-06",
+            "income": "63.16",
+            "outcome": "0",
+            "total": "63.16"
+        },
+        {
+            "transaction_date": "2024-01-07",
+            "income": "148.75",
+            "outcome": "0",
+            "total": "148.75"
+        },
+        {
+            "transaction_date": "2024-01-08",
+            "income": "307.32",
+            "outcome": "-38.41",
+            "total": "268.91"
+        },
+        {
+            "transaction_date": "2024-01-09",
+            "income": "1235.09",
+            "outcome": "-30.16",
+            "total": "1204.93"
+        },
+        {
+            "transaction_date": "2024-01-10",
+            "income": "311.90",
+            "outcome": "0",
+            "total": "311.90"
+        },
+        {
+            "transaction_date": "2024-01-11",
+            "income": "174.36",
+            "outcome": "0",
+            "total": "174.36"
+        },
+        {
+            "transaction_date": "2024-01-12",
+            "income": "758.14",
+            "outcome": "-23.04",
+            "total": "735.10"
+        },
+        {
+            "transaction_date": "2024-01-13",
+            "income": "103.35",
+            "outcome": "0",
+            "total": "103.35"
+        },
+        {
+            "transaction_date": "2024-01-14",
+            "income": "24.65",
+            "outcome": "0",
+            "total": "24.65"
+        },
+        {
+            "transaction_date": "2024-01-15",
+            "income": "534.47",
+            "outcome": "-70.66",
+            "total": "463.81"
+        }
+    ],
+    "totals": {
+        "total_income": "11489.06",
+        "total_outcome": "-261.52",
+        "total": 11227.539999999999
+    },
+    "pagination": {
+        "total_pages": 2,
+        "current_page": 1,
+        "next_page": 2,
+        "items_on_current_page": 15
+    }
+}
